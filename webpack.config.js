@@ -1,8 +1,9 @@
 const path = require('path'),
-  HtmlWebpackPlugin = require('html-webpack-plugin'),
-  {CleanWebpackPlugin} = require('clean-webpack-plugin'),
-  MiniCssExtractPlugin = require('mini-css-extract-plugin')
-  //HtmlWebpackPugPlugin = require('html-webpack-pug-plugin');
+    HtmlWebpackPlugin = require('html-webpack-plugin'),
+    {CleanWebpackPlugin} = require('clean-webpack-plugin'),
+    MiniCssExtractPlugin = require('mini-css-extract-plugin'),
+    CopyPlugin = require("copy-webpack-plugin");
+    //HtmlWebpackPugPlugin = require('html-webpack-pug-plugin');
 
 // const fs = require('fs');
 // const PATHS = {
@@ -30,10 +31,15 @@ module.exports = {
 
   plugins: [
     new HtmlWebpackPlugin({
-      template: 'index.pug',
+      template: 'pug_templates/index.pug',
     }),
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin(),
+    new CopyPlugin({
+      patterns: [
+        { from: "images", to: "images" }
+      ],
+    }),
     //new HtmlWebpackPugPlugin(),
     // ...PAGES.map(page => new HtmlWebpackPlugin({
     //   template: `${PAGES_DIR}/${page}`,
