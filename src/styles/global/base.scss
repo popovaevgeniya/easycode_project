@@ -3,7 +3,7 @@
 }
 
 html {
-  //font: normal 16px/1 robotoregular, sans-serif;
+  font: normal 16px/1 montserratmedium, sans-serif;
 }
 
 body {
@@ -37,6 +37,7 @@ textarea {
 
 button {
   cursor: pointer;
+  background: transparent;
 }
 
 a {
@@ -47,4 +48,12 @@ a {
 .container {
   max-width: 1170px;
   margin: 0 auto;
+}
+
+.button {
+  border-radius: 3px;
+}
+
+.button-red {
+  background: $red;
 }

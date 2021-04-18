@@ -82,7 +82,7 @@ module.exports = {
         loader: 'pug-loader'
       },
       {
-        test: /\.(jpg|png|svg)$/,
+        test: /\.(woff(2)?|ttf|eot|jpg|png|svg)$/,
         loader: 'file-loader'
       },
     ],

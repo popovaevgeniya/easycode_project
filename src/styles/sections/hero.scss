@@ -1,0 +1,59 @@
+.hero {
+  display: flex;
+
+  &__content {
+    text-transform: uppercase;
+    margin-right: 68px;
+
+    p {
+      font-weight: 300;
+      font-size: 30px;
+    }
+
+    h1 {
+      font-weight: 800;
+      font-size: 40px;
+      margin: 28px 0 40px 0;
+    }
+  }
+
+  &__thesis-list {
+    display: flex;
+    justify-content: space-between;
+
+    &-item {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 22px;
+      border-left: 1px solid $red;
+      padding-left: 5.56px;
+
+      &:first-child {
+        margin-right: 68px;
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 61px;
+
+    &-item {
+      display: flex;
+      text-transform: none;
+      width: 50%;
+      margin-bottom: 36px;
+
+      &-yellowText {
+        color: $yellow;
+        font-size: 35px;
+        margin-right: 16px;
+      }
+
+      &-icon {
+        margin: 0 29px 0 15px;
+      }
+    }
+  }
+}
