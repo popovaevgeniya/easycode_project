@@ -1,0 +1,64 @@
+.results {
+  background: $white;
+  padding: 60px 0 56px 0;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__block {
+    background: $black;
+    padding: 40px 95px 45px 22px;
+    display: flex;
+    margin-bottom: 20px;
+
+    &-link {
+      margin-top: 100px;
+      color: $yellow;
+      text-decoration: underline;
+    }
+
+    &-col1 {
+      margin-right: 38px;
+      max-width: 182px;
+    }
+
+    &-col2 {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    h3 {
+      font-size: 18px;
+    }
+
+    p {
+      line-height: 21px;
+      color: $grey;
+    }
+
+    &-about {
+      border-left: 1px solid $red;
+      padding-left: 6.25px;
+      margin-top: 26px;
+    }
+
+    &-job {
+      color: $grey;
+      line-height: 19px;
+    }
+
+    &-name {
+      font-weight: 600;
+      font-size: 16px;
+      margin-bottom: 8px;
+    }
+  }
+
+  &__button {
+    padding: 26.5px 72px;
+    margin: 0 auto;
+  }
+}

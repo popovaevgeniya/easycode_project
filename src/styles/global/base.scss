@@ -55,5 +55,28 @@ a {
 }
 
 .button-red {
+  color: white;
   background: $red;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+
+strong {
+  font-weight: 600;
+}
+
+.text-grey {
+  color: $grey;
+}
+
+.text-yellow {
+  color: $yellow;
+}
+
+.text-red {
+  color: $red;
+}
+
+.text-white {
+  color: $white;
 }

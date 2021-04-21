@@ -37,7 +37,7 @@
   &__list {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 61px;
+    margin: 61px 0 20px 0;
 
     &-item {
       display: flex;
@@ -55,5 +55,29 @@
         margin: 0 29px 0 15px;
       }
     }
+  }
+
+  &__info {
+    position: relative;
+    margin: 0 0 0 66px;
+
+    &::before {
+      content: '';
+      background: url(../images/icons/rocket.svg);
+      position: absolute;
+      width: 58px;
+      height: 80px;
+      left: -73px;
+    }
+
+    strong {
+      margin: 0 0 0 5px;
+    }
+  }
+
+  &__button {
+    color: white;
+    padding: 26.5px 90px;
+    margin-left: 32px;
   }
 }
