@@ -38,6 +38,7 @@ textarea {
 button {
   cursor: pointer;
   background: transparent;
+  padding: 0;
 }
 
 a {
@@ -48,6 +49,10 @@ a {
 .container {
   max-width: 1170px;
   margin: 0 auto;
+
+  @include b(mobile) {
+    padding: 0 10px;
+  }
 }
 
 .button {

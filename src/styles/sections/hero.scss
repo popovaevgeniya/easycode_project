@@ -1,25 +1,54 @@
 .hero {
   display: flex;
+  position: relative;
+
+  @include b(mobile) {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(../images/banner1.png);
+  }
+
+  &__image {
+    @include b(mobile) {
+      display: none;
+    }
+  }
 
   &__content {
     text-transform: uppercase;
     margin-right: 68px;
 
+    @include b(mobile) {
+      padding: 10px 0 17px 0;
+      margin-right: 0;
+    }
+
     p {
       font-weight: 300;
       font-size: 30px;
+
+      @include b(mobile) {
+        font-size: 15px;
+      }
     }
 
     h1 {
       font-weight: 800;
       font-size: 40px;
       margin: 28px 0 40px 0;
+
+      @include b(mobile) {
+        font-size: 20px;
+        margin: 17px 0 18px 0;
+      }
     }
   }
 
   &__thesis-list {
     display: flex;
     justify-content: space-between;
+
+    @include b(mobile) {
+      flex-direction: column;
+    }
 
     &-item {
       font-weight: 500;
@@ -28,8 +57,23 @@
       border-left: 1px solid $red;
       padding-left: 5.56px;
 
+      @include b(mobile) {
+        font-size: 13px;
+      }
+
       &:first-child {
         margin-right: 68px;
+
+        @include b(mobile) {
+          margin: 0 0 15px 0;
+          width: 60%;
+        }
+      }
+
+      &:last-child {
+        @include b(mobile) {
+          width: 95%;
+        }
       }
     }
   }
@@ -39,20 +83,41 @@
     flex-wrap: wrap;
     margin: 61px 0 20px 0;
 
+    @include b(mobile) {
+      flex-direction: column;
+      margin: 21px 0 10px 0;
+    }
+
     &-item {
       display: flex;
       text-transform: none;
       width: 50%;
       margin-bottom: 36px;
 
+      @include b(mobile) {
+        align-items: center;
+        font-size: 14px;
+        width: 100%;
+        margin-bottom: 15px;
+      }
+
       &-yellowText {
         color: $yellow;
         font-size: 35px;
         margin-right: 16px;
+
+        @include b(mobile) {
+          font-size: 20px;
+        }
       }
 
       &-icon {
         margin: 0 29px 0 15px;
+
+        @include b(mobile) {
+          margin: 0 20px 0 8px;
+          width: 10%;
+        }
       }
     }
   }
@@ -68,10 +133,22 @@
       width: 58px;
       height: 80px;
       left: -73px;
+
+      @include b(mobile) {
+        width: 36px;
+        height: 36px;
+        background-size: contain;
+        left: -40px;
+        top: -8px;
+      }
     }
 
     strong {
       margin: 0 0 0 5px;
+
+      @include b(mobile) {
+        font-size: 14px;
+      }
     }
   }
 
@@ -79,5 +156,12 @@
     color: white;
     padding: 26.5px 90px;
     margin-left: 32px;
+
+    @include b(mobile) {
+      position: absolute;
+      margin: 55px auto 0 auto;
+      padding: 12px 45px;
+      font-size: 12px;
+    }
   }
 }

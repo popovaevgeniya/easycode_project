@@ -3,6 +3,10 @@
   max-width: 955px;
   color: $white;
 
+  @include b(mobile) {
+    padding: 90px 10px 45px 10px;
+  }
+
   h1 {
     font-weight: 500;
     font-size: 25px;
@@ -10,16 +14,41 @@
     text-transform: uppercase;
     max-width: 688px;
     margin: 0 auto 20px auto;
+
+    @include b(mobile) {
+      font-size: 15px;
+      line-height: 22px;
+      text-align: center;
+      margin: 0 auto 15px auto;
+      padding: 0 65px;
+      position: relative;
+      z-index: 1;
+    }
   }
 
   &__wrapper {
     display: flex;
     justify-content: space-between;
 
+    @include b(mobile) {
+      flex-direction: row-reverse;
+    }
+
     &-content {
       display: flex;
       flex-direction: column;
       justify-content: space-around;
+    }
+
+    &-image {
+      @include b(mobile) {
+        transform: scale(-1, 1);
+
+        img {
+          width: 110%;
+          margin: -63px 0 0 -50px;
+        }
+      }
     }
   }
 
@@ -27,6 +56,17 @@
     font-size: 18px;
     line-height: 25px;
     max-width: 556px;
+
+    @include b(mobile) {
+      font-size: 16px;
+    }
+
+    &:not(:first-child) {
+      @include b(mobile) {
+        width: 145%;
+        margin-top: 15px;
+      }
+    }
   }
 
   h2 {
@@ -36,5 +76,11 @@
     text-transform: uppercase;
     width: 657.95px;
     margin: 50px auto 0 auto;
+
+    @include b(mobile) {
+      font-size: 15px;
+      text-align: center;
+      width: 69%;
+    }
   }
 }

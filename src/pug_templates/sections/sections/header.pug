@@ -2,6 +2,10 @@ header.header
     .container.header__container
         a(href="#" class="header__logo") #[img(src="images/logo.svg" alt="logo")]
         nav.header__nav
+            .header__burger
+                span.header__burger-icon
+                span.header__burger-icon
+                span.header__burger-icon
             ul.header__nav-list
                 li.header__list-item
                     a(href="#" class="header__item-link link") Академия
@@ -11,10 +15,12 @@ header.header
                     a(href="#" class="header__item-link link") Резюме
                 li.header__list-item
                     a(href="#" class="header__item-link link") Заказы
+            .header__mobileLogo
+                a(href="#") Онлайн #[span.text-red АКАДЕМИЯ]
             button.header__buttonSignIn.button Войти
             button.header__buttonSignUp Регистрация
             ul.header__langSwitcher
                 li
-                    span EN
+                    button EN
                 li.active
-                    span RU
+                    button RU
