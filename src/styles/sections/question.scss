@@ -3,6 +3,10 @@
   max-width: 955px;
   color: $white;
 
+  @include b(laptop) {
+    padding: 105px 15px 64px 15px;
+  }
+
   @include b(mobile) {
     padding: 90px 10px 45px 10px;
   }
@@ -76,6 +80,10 @@
     text-transform: uppercase;
     width: 657.95px;
     margin: 50px auto 0 auto;
+
+    @include b(laptop) {
+      width: auto;
+    }
 
     @include b(mobile) {
       font-size: 15px;

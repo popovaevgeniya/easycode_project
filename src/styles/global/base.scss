@@ -50,7 +50,7 @@ a {
   max-width: 1170px;
   margin: 0 auto;
 
-  @include b(mobile) {
+  @include b(laptop) {
     padding: 0 10px;
   }
 }
