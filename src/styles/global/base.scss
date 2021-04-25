@@ -4,6 +4,10 @@
 
 html {
   font: normal 16px/1 montserratmedium, sans-serif;
+
+  @include b(mobile) {
+    font-size: 14px;
+  }
 }
 
 body {

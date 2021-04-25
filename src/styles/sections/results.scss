@@ -2,6 +2,10 @@
   background: $white;
   padding: 60px 0 56px 0;
 
+  @include b(mobile) {
+    padding: 30px 0 32px 0;
+  }
+
   .container {
     display: flex;
     flex-direction: column;
@@ -13,16 +17,39 @@
     display: flex;
     margin-bottom: 20px;
 
+    @include b(mobile) {
+      flex-direction: column;
+      padding: 20px 10px 30px 10px;
+    }
+
     &-link {
       display: block;
       margin-top: 100px;
       color: $yellow;
       text-decoration: underline;
+
+      @include b(mobile) {
+        margin-top: 13px;
+      }
     }
 
     &-col1 {
       margin-right: 38px;
       max-width: 182px;
+
+      @include b(mobile) {
+        display: flex;
+        max-width: none;
+        margin: 0 0 13px 0;
+      }
+
+      img {
+        @include b(mobile) {
+          width: 91.93px;
+          height: 85.12px;
+          margin-right: 21px;
+        }
+      }
     }
 
     &-col2 {
@@ -33,33 +60,60 @@
 
     h3 {
       font-size: 18px;
+
+      @include b(mobile) {
+        margin-bottom: 11px;
+      }
     }
 
     p {
       line-height: 21px;
       color: $grey;
+
+      &:not(:last-child) {
+        @include b(mobile) {
+          margin-bottom: 20px;
+        }
+      }
     }
 
     &-about {
       border-left: 1px solid $red;
       padding-left: 6.25px;
       margin-top: 26px;
+
+      @include b(mobile) {
+        margin-top: 0;
+      }
     }
 
     &-job {
       color: $grey;
       line-height: 19px;
+
+      @include b(mobile) {
+        font-size: 13px;
+      }
     }
 
     &-name {
       font-weight: 600;
       font-size: 16px;
       margin-bottom: 8px;
+
+      @include b(mobile) {
+        font-size: 14px;
+      }
     }
   }
 
   &__button {
     padding: 26.5px 72px;
     margin: 0 auto;
+
+    @include b(mobile) {
+      font-size: 12px;
+      padding: 14px 40px;
+    }
   }
 }
