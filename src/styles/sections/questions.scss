@@ -3,18 +3,32 @@
 
   &__wrapper {
     display: flex;
+    flex-wrap: wrap;
+
+    @include b(mobile) {
+      flex-direction: column;
+    }
   }
 
   h1 {
+    font-weight: 400;
     color: $yellow;
     text-align: center;
     margin-bottom: 37.5px;
+
+    @include b(mobile) {
+      font-size: 15px;
+    }
   }
 
   p {
     font-size: 17px;
     margin-bottom: 20px;
     line-height: 25px;
+
+    @include b(mobile) {
+      font-size: 15px;
+    }
   }
 
   strong {
@@ -28,7 +42,7 @@
     color: $grey;
 
     &:before {
-      content: "-";
+      content: "\2014";
       margin: 0 5px 0 0;
     }
 
@@ -37,24 +51,57 @@
     }
   }
 
-  &__col1 {
-    border-right: 1px solid $light-grey;
-    max-width: 585px;
-    padding-right: 23px;
+  &__block1 {
+    width: 50%;
+    padding: 30px 60px 30px 100px;
 
-    &-block1 {
-      border-bottom: 1px solid $light-grey;
-      padding: 30px 100px 60px 30px;
-    }
-
-    &-block2 {
-      padding: 112px 100px 0 30px;
+    @include b(mobile) {
+      border: none;
+      padding: 0 10px;
+      width: 100%;
     }
   }
 
-  &__col2 {
-    max-width: 585px;
+  &__block2 {
+    width: 50%;
+    border-left: 1px solid $light-grey;
     padding: 30px 0 0 105px;
+
+    @include b(mobile) {
+      border: none;
+      padding: 0 10px;
+      width: 100%;
+    }
+
+    p {
+      color: $red;
+    }
+  }
+
+  &__block3 {
+    width: 47.7%;
+    border-top: 1px solid $light-grey;
+    padding: 112px 37px 0 90px;
+    margin: -140px 23px 0 0;
+
+    @include b(mobile) {
+      border: none;
+      padding: 0 10px;
+      margin: 0;
+      width: 100%;
+    }
+  }
+
+  &__block4 {
+    width: 49%;
+    border-left: 1px solid $light-grey;
+    padding: 0 0 0 105px;
+
+    @include b(mobile) {
+      border: none;
+      padding: 0 10px;
+      width: 100%;
+    }
   }
 
   &__cloud {
@@ -62,6 +109,11 @@
     width: 446px;
     height: 265px;
     padding: 55px 10px 52px 47px;
+    margin-left: -48px;
+
+    @include b(mobile) {
+      width: 120%;
+    }
 
     p {
       font-weight: 500;
@@ -69,14 +121,31 @@
       line-height: 18px;
       color: $grey;
 
+      @include b(mobile) {
+        font-size: 13px;
+      }
+
       +p {
         padding-right: 57px;
+
+        @include b(mobile) {
+          padding-right: 0;
+        }
       }
     }
 
     &-image {
       text-align: right;
       margin: -140px -58px 34px 0;
+
+      @include b(mobile) {
+        text-align: center;
+        margin: 0;
+
+        img {
+          width: 158px;
+        }
+      }
 
       &-ellipses {
         display: flex;
