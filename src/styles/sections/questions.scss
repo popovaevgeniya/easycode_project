@@ -18,6 +18,7 @@
 
     @include b(mobile) {
       font-size: 15px;
+      line-height: 22px;
     }
   }
 
@@ -55,7 +56,7 @@
     width: 50%;
     padding: 30px 60px 30px 100px;
 
-    @include b(mobile) {
+    @include b(tablet) {
       border: none;
       padding: 0 10px;
       width: 100%;
@@ -67,9 +68,9 @@
     border-left: 1px solid $light-grey;
     padding: 30px 0 0 105px;
 
-    @include b(mobile) {
+    @include b(tablet) {
       border: none;
-      padding: 0 10px;
+      padding: 50px 10px 0 10px;
       width: 100%;
     }
 
@@ -82,13 +83,14 @@
     width: 47.7%;
     border-top: 1px solid $light-grey;
     padding: 112px 37px 0 90px;
-    margin: -140px 23px 0 0;
+    margin: -140px 27px 0 0;
 
-    @include b(mobile) {
+    @include b(tablet) {
       border: none;
-      padding: 0 10px;
+      padding: 50px 10px 0 10px;
       margin: 0;
       width: 100%;
+      order: 1;
     }
   }
 
@@ -97,22 +99,35 @@
     border-left: 1px solid $light-grey;
     padding: 0 0 0 105px;
 
-    @include b(mobile) {
+    @include b(tablet) {
       border: none;
-      padding: 0 10px;
+      padding: 19px 10px 0 10px;
       width: 100%;
     }
   }
 
   &__cloud {
-    background: url(../images/border.png);
+    background: url(../images/border.png) no-repeat;
+    background-size: 100% 100%;
     width: 446px;
     height: 265px;
     padding: 55px 10px 52px 47px;
     margin-left: -48px;
 
+    @include b(tablet) {
+      margin: 0 auto;
+    }
+
     @include b(mobile) {
-      width: 120%;
+      width: 136%;
+      padding: 55px 47px 52px 47px;
+      margin: 0 -48px;
+    }
+
+    &-content {
+      @include b(mobile) {
+        width: 90%;
+      }
     }
 
     p {
@@ -138,6 +153,11 @@
       text-align: right;
       margin: -140px -58px 34px 0;
 
+      @include b(tablet) {
+        text-align: center;
+        margin: 0;
+      }
+
       @include b(mobile) {
         text-align: center;
         margin: 0;
@@ -152,6 +172,16 @@
         flex-direction: column;
         align-items: flex-end;
         margin: 0 65px 0 0;
+
+        @include b(tablet) {
+          align-items: center;
+          margin: 0;
+        }
+
+        @include b(mobile) {
+          align-items: flex-end;
+          margin: 0 21px 0 0;
+        }
       }
 
       &-ellipse1 {
@@ -160,6 +190,9 @@
         height: 23px;
         margin-bottom: 8px;
 
+        @include b(mobile) {
+          margin: 0;
+        }
       }
 
       &-ellipse2 {
@@ -167,12 +200,20 @@
         width: 18px;
         height: 15px;
         margin-bottom: 11px;
+
+        @include b(mobile) {
+          margin: 0 30px 0 0;
+        }
       }
 
       &-ellipse3 {
         background: url(../images/Ellipse3.png);
         width: 11px;
         height: 9px;
+
+        @include b(mobile) {
+          margin-right: 60px;
+        }
       }
     }
   }

@@ -1,11 +1,17 @@
 import 'slick-carousel';
-// import 'slick-carousel/slick/slick.css';
-// import 'slick-carousel/slick/slick-theme.css';
+import 'slick-carousel/slick/slick.css';
+import $ from 'jquery';
 
 function makeSlider(){
-    document.getElementsByClassName('reviewsSlider')[0].slick({
-        infinite: false
-    });
+    if ($(window).width() < 480) {
+        $('.reviewsSlider').slick({
+            dots: true,
+            arrows: true,
+            infinite: true,
+            speed: 100,
+            slidesToShow: 1
+        });
+    }
 };
 
 makeSlider();

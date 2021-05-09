@@ -3,15 +3,7 @@ const path = require('path'),
     {CleanWebpackPlugin} = require('clean-webpack-plugin'),
     MiniCssExtractPlugin = require('mini-css-extract-plugin'),
     CopyPlugin = require("copy-webpack-plugin");
-    //HtmlWebpackPugPlugin = require('html-webpack-pug-plugin');
-
-// const fs = require('fs');
-// const PATHS = {
-//   src: path.join(__dirname, '../src'),
-//   dist: path.join(__dirname, '../dist')
-// }
-// const PAGES_DIR = `${PATHS.src}/pug/pages/`;
-// const PAGES = fs.readdirSync(PAGES_DIR).filter(fileName => fileName.endsWith('.pug'));
+const webpack = require("webpack");
 
 module.exports = {
   mode: 'development',
@@ -40,11 +32,10 @@ module.exports = {
         { from: "images", to: "images" }
       ],
     }),
-    //new HtmlWebpackPugPlugin(),
-    // ...PAGES.map(page => new HtmlWebpackPlugin({
-    //   template: `${PAGES_DIR}/${page}`,
-    //   filename: `./${page.replace(/\.pug/,'.html')}`
-    // }))
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery'
+    }),
   ],
 
   module: {

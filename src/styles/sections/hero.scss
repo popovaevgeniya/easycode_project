@@ -2,12 +2,19 @@
   display: flex;
   position: relative;
 
-  @include b(mobile) {
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(../images/banner1.png);
+  @include b(tablet-xl) {
+    padding: 0 10px;
+  }
+
+  @include b(tablet) {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(../images/banner1.png) no-repeat;
+    background-size: cover;
+    padding-top: 10px;
+    padding-bottom: 20px;
   }
 
   &__image {
-    @include b(mobile) {
+    @include b(tablet) {
       display: none;
     }
   }
@@ -94,6 +101,10 @@
       width: 50%;
       margin-bottom: 36px;
 
+      @include b(tablet-xl) {
+        width: 100%;
+      }
+
       @include b(mobile) {
         align-items: center;
         font-size: 14px;
@@ -124,7 +135,8 @@
 
   &__info {
     position: relative;
-    margin: 0 0 0 66px;
+    margin: 0 32px 35px 66px;
+    display: inline-block;
 
     &::before {
       content: '';
@@ -133,6 +145,7 @@
       width: 58px;
       height: 80px;
       left: -73px;
+      top: -33px;
 
       @include b(mobile) {
         width: 36px;
@@ -155,13 +168,13 @@
   &__button {
     color: white;
     padding: 26.5px 90px;
-    margin-left: 32px;
 
     @include b(mobile) {
       position: absolute;
-      margin: 55px auto 0 auto;
       padding: 12px 45px;
       font-size: 12px;
+      bottom: -55px;
+      left: 18%;
     }
   }
 }

@@ -116,4 +116,54 @@
       padding: 14px 40px;
     }
   }
+
+  .slick-dots {
+    bottom: 0;
+
+    li {
+      width: 8px;
+      height: 8px;
+
+      button:before {
+        font-size: 10px;
+      }
+    }
+  }
+
+  .slick-arrow {
+    width: 7px;
+    height: 10px;
+    overflow: hidden;
+    z-index: 1;
+
+    &::before {
+      content: "";
+      width: 7px;
+      height: 8px;
+      display: block;
+      border: 1px solid #000;
+      left: 3px;
+      top: 0;
+      position: absolute;
+      transform: rotate(-135deg);
+    }
+  }
+
+  .slick-prev,
+  .slick-next {
+    top: auto;
+    bottom: -6px;
+  }
+
+  .slick-prev {
+    left: 120px;
+  }
+
+  .slick-next {
+    right: 112px;
+
+    &::before {
+      left: -6px;
+    }
+  }
 }
