@@ -1,19 +1,23 @@
 {
-  "name": "testwebpack",
+  "name": "easycode_project",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "homepage": "https://popovaevgeniya.github.io/easycode_project",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-cli serve --mode development",
     "build": "webpack",
-    "serv": "static build"
+    "serv": "static build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "css-loader": "^5.2.0",
     "file-loader": "^6.2.0",
+    "gh-pages": "^5.0.0",
     "jquery": "^3.6.0",
     "slick-carousel": "^1.8.1",
     "style-loader": "^2.0.0"

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/testWebpack.iml" filepath="$PROJECT_DIR$/.idea/testWebpack.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/easycode_project.iml" filepath="$PROJECT_DIR$/.idea/easycode_project.iml" />
     </modules>
   </component>
 </project>
